@@ -28,12 +28,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.front
+    environment:
+      PORT: 3002
     volumes:
       - ./front:/usr/src/app
       - react_node_modules:/usr/src/app/node_modules
-    # command: sh -c "cd front && yarn start"
     ports:
-      - "8000:3000"
+      - "3002:3002"
 
 volumes:
   react_node_modules:
