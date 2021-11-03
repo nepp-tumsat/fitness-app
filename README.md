@@ -6,8 +6,8 @@ $ source aliases.sh
 
 ## コンテナ起動
 ```
-$ fitness-api
-$ fitness-front
+$ fn-api
+$ fn-front
 ```
 
 ## DB

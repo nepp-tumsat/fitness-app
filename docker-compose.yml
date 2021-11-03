@@ -10,9 +10,12 @@ services:
 
   api:
     build:
-      context: ./api/
-      dockerfile: Dockerfile
-    command: /bin/sh -c "rm -f /myapp/tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: fn-api
+    command: /bin/sh -c "rm -f /myapp/tmp/pids/server.pid && bundle exec rails s -p 3001 -b '0.0.0.0'"
+    tty: True
+    stdin_open: True
     volumes:
       - ./api:/myapp
       - ./api/vendor/bundle:/myapp/vendor/bundle
@@ -20,20 +23,26 @@ services:
       TZ: Asia/Tokyo
       RAILS_ENV: development
     ports:
-      - 3000:3000
+      - "3001:3001"
     depends_on:
       - db
 
   front:
     build:
-      context: ./front/
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: Dockerfile.front
+    container_name: fn-front
+    tty: True
+    stdin_open: True
+    environment:
+      PORT: 3002
     volumes:
       - ./front:/usr/src/app
-    command: sh -c "cd front && yarn start"
+      - react_node_modules:/usr/src/app/node_modules
     ports:
-      - "8000:8000"
+      - "3002:3002"
 
 volumes:
+  react_node_modules:
   postgres-data:
     driver: local
