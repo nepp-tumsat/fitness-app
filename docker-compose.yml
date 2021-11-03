@@ -26,14 +26,16 @@ services:
 
   front:
     build:
-      context: ./front/
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: Dockerfile.front
     volumes:
       - ./front:/usr/src/app
-    command: sh -c "cd front && yarn start"
+      - react_node_modules:/usr/src/app/node_modules
+    # command: sh -c "cd front && yarn start"
     ports:
-      - "8000:8000"
+      - "8000:3000"
 
 volumes:
+  react_node_modules:
   postgres-data:
     driver: local
