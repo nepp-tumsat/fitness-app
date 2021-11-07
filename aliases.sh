@@ -8,5 +8,5 @@ alias fn-front='docker-compose up front'
 alias fn-front-b='docker-compose up --build front'
 alias fn-front-bash='docker exec -it fn-front sh'
 
-alias db-create='docker-compose run api rails db:create'
-alias db-migrate='docker-compose run api rails db:migrate'
+alias db-create='docker-compose run --rm api rails db:create'
+alias db-migrate='docker-compose run --rm api rails db:migrate'

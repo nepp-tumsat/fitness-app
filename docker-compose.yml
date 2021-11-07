@@ -3,17 +3,20 @@ version: "3.9"
 services:
   db:
     image: postgres
+    container_name: fn-db
     volumes:
       - postgres-data:/var/lib/postgresql/data
     environment:
+      - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
+    ports:
+      - "6500:5432"
 
   api:
     build:
       context: .
       dockerfile: Dockerfile.api
     container_name: fn-api
-    command: /bin/sh -c "rm -f /myapp/tmp/pids/server.pid && bundle exec rails s -p 3001 -b '0.0.0.0'"
     tty: True
     stdin_open: True
     volumes:
