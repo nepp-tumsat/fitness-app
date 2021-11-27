@@ -3,5 +3,5 @@
 echo "yarn install ..."
 yarn install
 
-echo "yarn start ..."
-yarn start
+echo "yarn dev ..."
+yarn dev
