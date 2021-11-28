@@ -41,11 +41,12 @@ services:
       PORT: 3002
     volumes:
       - ./front:/usr/src/app
-      - react_node_modules:/usr/src/app/node_modules
+      # TypeScriptがmoduleを参照できなくてエラーを吐くのでホストと同期させる
+      # - react_node_modules:/usr/src/app/node_modules
     ports:
       - "3002:3002"
 
 volumes:
-  react_node_modules:
+  # react_node_modules:
   postgres-data:
     driver: local
