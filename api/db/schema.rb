@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_062151) do
+ActiveRecord::Schema.define(version: 2021_11_30_052412) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,12 +61,18 @@ ActiveRecord::Schema.define(version: 2021_11_22_062151) do
   end
 
   create_table "training_contents", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "type"
+    t.string "part"
+    t.text "description"
+    t.string "unit", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "trainings", force: :cascade do |t|
     t.integer "user_id", null: false
+    t.integer "training_content_id", null: false
     t.integer "rep", null: false
     t.float "weight"
     t.datetime "done_at", null: false
@@ -125,4 +131,14 @@ ActiveRecord::Schema.define(version: 2021_11_22_062151) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  add_foreign_key "eaten_scraped_food_weights", "scraped_foods"
+  add_foreign_key "eaten_scraped_food_weights", "user_diet_logs"
+  add_foreign_key "eaten_user_food_weights", "user_created_foods"
+  add_foreign_key "eaten_user_food_weights", "user_diet_logs"
+  add_foreign_key "memos", "users"
+  add_foreign_key "targets", "users"
+  add_foreign_key "trainings", "training_contents"
+  add_foreign_key "trainings", "users"
+  add_foreign_key "user_body_compositions", "users"
+  add_foreign_key "user_diet_logs", "users"
 end
