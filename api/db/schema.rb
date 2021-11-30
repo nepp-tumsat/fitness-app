@@ -131,14 +131,14 @@ ActiveRecord::Schema.define(version: 2021_11_30_052412) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
-  add_foreign_key "eaten_scraped_food_weights", "scraped_foods"
-  add_foreign_key "eaten_scraped_food_weights", "user_diet_logs"
-  add_foreign_key "eaten_user_food_weights", "user_created_foods"
-  add_foreign_key "eaten_user_food_weights", "user_diet_logs"
-  add_foreign_key "memos", "users"
-  add_foreign_key "targets", "users"
-  add_foreign_key "trainings", "training_contents"
-  add_foreign_key "trainings", "users"
-  add_foreign_key "user_body_compositions", "users"
-  add_foreign_key "user_diet_logs", "users"
+  add_foreign_key "eaten_scraped_food_weights", "scraped_foods", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "eaten_scraped_food_weights", "user_diet_logs", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "eaten_user_food_weights", "user_created_foods", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "eaten_user_food_weights", "user_diet_logs", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "memos", "users", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "targets", "users", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "trainings", "training_contents", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "trainings", "users", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "user_body_compositions", "users", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "user_diet_logs", "users", on_update: :cascade, on_delete: :cascade
 end
