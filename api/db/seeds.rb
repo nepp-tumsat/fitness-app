@@ -1,18 +1,18 @@
 # coding: utf-8
-User.create!(
+User.first_or_create(
     :name => "hogehoge",
     :email => "hogehoge@gmail.com",
     :password => "hogehoge1234",
     :tall => 175.4 ,
     :birthday => "2000-01-01")
 
-UserBodyComposition.create!(
+UserBodyComposition.first_or_create(
     :user_id => "1",
     :weight => 67.2,
     :body_fat_rate => 23.4
 )
 
-Target.create!(
+Target.first_or_create(
     :user_id => "1",
     :weight => 59.5,
     :body_fat_rate => 15.0,
