@@ -12,6 +12,7 @@ $ fn-front
 
 ## DB
 ```
-$ db-create
-$ db-migrate
+$ fn-db-bash
+/# psql -d myapp_development -U postgres
 ```
+
