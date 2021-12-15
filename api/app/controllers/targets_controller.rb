@@ -15,6 +15,7 @@ class TargetsController < ApplicationController
     end
 
     def create
+        pp "test"
         target = Target.new(target_params)
         if target.save
             render json: {
