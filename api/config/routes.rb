@@ -4,4 +4,5 @@ Rails.application.routes.draw do
       resources :sessions, only: %i[index]
   end
   resources :targets
+  resources :user_body_compositions
 end
