@@ -11,6 +11,6 @@ class ApplicationController < ActionController::API
   private
 
   def configure_permitted_parameters #必要なパラメータを追加
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name,:birthday,:tall,:gender,:image])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name,:birthday,:tall,:gender,image: [:url]])
   end 
 end
