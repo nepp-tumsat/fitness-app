@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   end
   resources :targets
   resources :user_body_compositions
+  resources :memos
 end
