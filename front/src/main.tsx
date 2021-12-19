@@ -16,7 +16,7 @@ render(
   <BrowserRouter>
     <Header />
     <Routes>
-      <Route path="/" element={<App />} />
+      <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
     </Routes>
   </BrowserRouter>,
