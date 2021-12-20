@@ -6,7 +6,7 @@ import FitnessCard from '../components/FitnessCard'
 
 export default function Home() {
   return (
-    <Box mt={2} mx={10} >
+    <Box mt={2} mx={50} >
     <Grid container spacing={2}>
       <Grid item xs={6}>
         <WeightCard />
