@@ -1,4 +1,3 @@
-import React from 'react'
 import { render } from 'react-dom'
 import {
   BrowserRouter,
@@ -6,7 +5,6 @@ import {
   Route
 } from 'react-router-dom'
 import './index.css'
-import App from './App'
 import Home from './views/Home'
 import Header from './components/Header'
 
@@ -17,7 +15,6 @@ render(
     <Header />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/home" element={<Home />} />
     </Routes>
   </BrowserRouter>,
   rootElement

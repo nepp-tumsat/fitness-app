@@ -30,7 +30,7 @@ export default function BfpCard() {
   return (
     <Card variant="outlined">
       <CustomCardHeader
-        title="WEIGHT"
+        title="BFP"
         action={
           <Box>
             <CustomIconButton aria-label="settings">
