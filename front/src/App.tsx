@@ -3,24 +3,26 @@ import {
   Routes,
   Route
 } from 'react-router-dom'
-import { render } from 'react-dom'
+import { Component } from 'react'
 import './index.css'
 import './App.css';
-import Home from './views/Home'
-import Header from './components/Header'
+import Default from './Default'
+import Login from './views/Login'
 
-const rootElement = document.getElementById('root')
-function App() {
-  return (
+// const rootElement = document.getElementById('root')
+class App extends Component {
+  render() {
+    return (
       <BrowserRouter>
-        <div className='App'>
-          <Header />
+        <div>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="login" element={<Login />} />
+            <Route path="/" element={<Default />} />
           </Routes>
         </div>
       </BrowserRouter>
-  );
+    );
+  }
 }
 
-export default App;
+export default App
