@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :targets
   resources :user_body_compositions
   resources :memos
+  resources :trainings
+  resources :training_contents
 end

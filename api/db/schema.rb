@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2021_11_30_052412) do
 
   create_table "training_contents", force: :cascade do |t|
     t.string "name", null: false
-    t.string "type"
+    t.string "site"
     t.string "part"
     t.text "description"
     t.string "unit", null: false
