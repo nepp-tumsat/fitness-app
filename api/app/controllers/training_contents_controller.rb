@@ -3,7 +3,7 @@ class TrainingContentsController < ApplicationController
     def index
         render json: {
             status: 200,
-            data: current_user.training_contents.order(created_at: :desc)
+            data: TrainingContent.where(user_id: current_user.id).order(created_at: :desc)
         }
     end
 
@@ -59,6 +59,6 @@ class TrainingContentsController < ApplicationController
     end
 
     def training_content_params
-        params.require(:training_content).permit(:name,:site,:part,:description,:unit)
+        params.require(:training_content).permit(:user_id,:name,:site,:part,:description,:unit)
     end
 end

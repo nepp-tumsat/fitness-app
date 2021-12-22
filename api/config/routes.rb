@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :memos
   resources :trainings
   resources :training_contents
+  resources :user_diet_logs
 end

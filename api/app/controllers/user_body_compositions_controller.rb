@@ -62,4 +62,3 @@ class UserBodyCompositionsController < ApplicationController
         params.require(:user_body_composition).permit(:user_id,:weight,:body_fat_rate)
     end
 end
-

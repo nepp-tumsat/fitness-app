@@ -1,0 +1,2 @@
+class ScrapedFoodsController < ApplicationController
+end
