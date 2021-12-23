@@ -4,12 +4,9 @@ import {
   Route
 } from 'react-router-dom'
 import { Component } from 'react'
-import './index.css'
-import './App.css';
 import Default from './Default'
-import Login from './views/Login'
+import Login from '../views/login'
 
-// const rootElement = document.getElementById('root')
 class App extends Component {
   render() {
     return (
