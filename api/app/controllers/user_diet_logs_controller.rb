@@ -1,9 +1,10 @@
 class UserDietLogsController < ApplicationController
     before_action :set_user_diet_log, only: [:show, :update, :destroy]
     def index
+        user_diet_logs = current_user.user_diet_logs
         render json: {
             status: 200,
-            data: current_user.user_diet_logs.order(created_at: :desc)
+            data: user_diet_logs.scraped_foods.order(created_at: :desc)
         }
     end
 
@@ -12,6 +13,11 @@ class UserDietLogsController < ApplicationController
             status: 200, 
             data: @user_diet_log
         }
+    end
+
+    def add_gram
+        user_diet_log = current_user.user_diet_logs.last
+        #EatenScrapedFood.where(user_diet_log_id: user_diet_log.id, scraped_food_id: 1) #WIP
     end
 
     def create

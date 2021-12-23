@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(version: 2021_11_30_052412) do
   end
 
   create_table "user_created_foods", force: :cascade do |t|
+    t.integer "user_id"
     t.string "name", null: false
     t.float "protein", null: false
     t.float "fat", null: false

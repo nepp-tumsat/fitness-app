@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :trainings
   resources :training_contents
   resources :user_diet_logs
+  resources :scraped_foods
+  resources :user_created_foods
 end
