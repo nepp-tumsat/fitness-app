@@ -1,6 +1,6 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins ENV['FRONT_HOST'] #reactのport
+    origins ENV['FRONT_URL'] #reactのport
 
     resource "*",
       headers: :any,
