@@ -1,10 +1,10 @@
 import { Grid, Box } from '@mui/material'
-import WeightCard from '../components/WeightCard'
-import BfpCard from '../components/BfpCard'
-import PfcBalanceCard from '../components/PfcBalanceCard'
-import FitnessCard from '../components/FitnessCard'
 import React, { useContext } from 'react';
 import { AuthContext } from '../App';
+import WeightCard from './WeightCard'
+import BfpCard from './BfpCard'
+import PfcBalanceCard from './PfcBalanceCard'
+import FitnessCard from './FitnessCard'
 
 declare global {
   namespace JSX {
@@ -13,7 +13,6 @@ declare global {
     }
   }
 }
-
 
 export default function Home() {
   const { isSignedIn, currentUser } = useContext(AuthContext)

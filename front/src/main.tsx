@@ -1,10 +1,10 @@
 import { render } from 'react-dom'
-import './index.css'
-import App from './App'
+import './assets/styles/global.css'
+import App from './screens/App'
 
 const rootElement = document.getElementById('root')
 
 render(
-  <App/>,
+  <App />,
   rootElement
 )
