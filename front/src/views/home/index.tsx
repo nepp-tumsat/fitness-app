@@ -1,8 +1,8 @@
 import { Grid, Box } from '@mui/material'
-import WeightCard from '../components/WeightCard'
-import BfpCard from '../components/BfpCard'
-import PfcBalanceCard from '../components/PfcBalanceCard'
-import FitnessCard from '../components/FitnessCard'
+import WeightCard from './WeightCard'
+import BfpCard from './BfpCard'
+import PfcBalanceCard from './PfcBalanceCard'
+import FitnessCard from './FitnessCard'
 
 export default function Home() {
   return (
