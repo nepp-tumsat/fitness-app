@@ -1,6 +1,7 @@
 class CreateUserCreatedFoods < ActiveRecord::Migration[6.1]
   def change
     create_table :user_created_foods do |t|
+      t.integer :user_id
       t.string :name, null: false
       t.float :protein, null: false
       t.float :fat, null: false

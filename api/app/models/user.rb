@@ -13,4 +13,5 @@ class User < ActiveRecord::Base
   has_many :user_body_compositions
   has_many :targets
   has_many :user_diet_logs
+  has_many :memos
 end

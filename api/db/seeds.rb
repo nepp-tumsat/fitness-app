@@ -12,7 +12,7 @@ User.where(:email => "hogehoge2@gmail.com").first_or_create(
     :birthday => "2000-01-01")
 
 
-UserBodyComposition.where(:user_id => 1).first_or_create(
+UserBodyComposition.where(:user_id => 5).first_or_create(
     :weight => 67.2,
     :body_fat_rate => 23.4
 )
@@ -22,7 +22,7 @@ UserBodyComposition.where(:user_id => 2).first_or_create(
     :body_fat_rate => 16.7
 )
 
-Target.where(:user_id => 1).first_or_create(
+Target.where(:user_id => 5).first_or_create(
     :weight => 59.5,
     :body_fat_rate => 15.0,
     :daily_energy => 2000,
