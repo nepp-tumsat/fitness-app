@@ -1,3 +1,7 @@
-.default-body {
+.DefaultBody {
   background-color: #f2f6ff;
+}
+
+.ValidateBody {
+  background-color: black;
 }

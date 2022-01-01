@@ -2,15 +2,7 @@
   background-color: white;
 }
 
-/* .TabContainer {
-  display: grid;
-} */
-
-/* .LoginForm {
-  background-color: #f2f6ff;
-} */
-
-.LoginHeader {
+.Header {
   margin-top: 62px;
   margin-bottom: 60px;
 }
