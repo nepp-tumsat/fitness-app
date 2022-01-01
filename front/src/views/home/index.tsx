@@ -1,6 +1,6 @@
 import { Grid, Box } from '@mui/material'
 import React, { useContext } from 'react';
-import { AuthContext } from '../App';
+import { AuthContext } from '../../screens/App';
 import WeightCard from './WeightCard'
 import BfpCard from './BfpCard'
 import PfcBalanceCard from './PfcBalanceCard'
