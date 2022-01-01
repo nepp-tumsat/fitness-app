@@ -1,10 +1,21 @@
 import { render } from 'react-dom'
-import './assets/styles/global.css'
-import App from './screens/App'
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom'
+import './index.css'
+import Home from './views/Home'
+import Header from './components/Header'
 
 const rootElement = document.getElementById('root')
 
 render(
-  <App />,
+  <BrowserRouter>
+    <Header />
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+  </BrowserRouter>,
   rootElement
 )
