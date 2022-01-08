@@ -23,13 +23,13 @@ export default function LoginHeader() {
 
       <div className="wrapper">
         <div className="element1">
-          <NavLink to="/">
+          <NavLink to="/login">
             <h2>ログイン</h2>
           </NavLink>
         </div>
 
         <div className="element2">
-          <NavLink to="/">
+          <NavLink to="/signup">
             <h2>新規登録</h2>
           </NavLink>
         </div>

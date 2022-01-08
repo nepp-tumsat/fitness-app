@@ -7,13 +7,12 @@ import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import { createTheme } from '@mui/material/styles';
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../screens/App';
-import { styled } from '@mui/material/styles';
 import './style.css';
+
+import LoginHeader from '../../components/login_header';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -46,6 +45,7 @@ export default function Login() {
 
   return (
     <div>
+      <LoginHeader />
       <Box
         height="74vh"
         bgcolor="#f2f6ff"

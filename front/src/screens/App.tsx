@@ -4,7 +4,10 @@ import Cookies from 'js-cookie';
 import axios from 'axios';
 
 import Default from './Default';
-import Validate from './Validate';
+
+import Login from '../views/login';
+import SignUp from '../views/signup';
+import NotFound from '../views/errors/404';
 
 interface User {
   id: number;
@@ -89,7 +92,9 @@ export default function App() {
         <div>
           <Routes>
             <Route path="/" element={<Default />} />
-            <Route path="/login" element={<Validate />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </AuthContext.Provider>
