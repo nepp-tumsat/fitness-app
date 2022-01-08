@@ -26,7 +26,7 @@ export default function PfcBalanceCard() {
         >
       </CustomCardHeader>
       <CardContent>
-        <Grid container direction="column" alignItems="center">
+        <Grid container alignItems="center">
           <Grid item xs={12}>
             <PfcGraph />
           </Grid>

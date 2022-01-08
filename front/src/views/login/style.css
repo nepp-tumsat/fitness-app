@@ -1,0 +1,35 @@
+.LoginFormField {
+  background-color: white;
+}
+
+/* .TabContainer {
+  display: grid;
+} */
+
+/* .LoginForm {
+  background-color: #f2f6ff;
+} */
+
+.LoginHeader {
+  margin-top: 62px;
+  margin-bottom: 60px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper div {
+  height: 50px;
+  background-color: white;
+}
+
+.element1 {
+  margin-right: 100px;
+  vertical-align: bottom;
+}
+
+.element2 div {
+  margin-right: 100px;
+}
