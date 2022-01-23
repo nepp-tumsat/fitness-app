@@ -45,8 +45,8 @@ export default function App() {
     return axios.get('http://localhost:3001/auth/sessions', {
       headers: {
         'access-token': Cookies.get('_access_token') || '',
-        client: Cookies.get('_client') || '',
-        uid: Cookies.get('_uid') || '',
+        'client': Cookies.get('_client') || '',
+        'uid': Cookies.get('_uid') || '',
       },
     });
   };
